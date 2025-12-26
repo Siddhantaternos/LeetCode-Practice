@@ -27,6 +27,9 @@ Each pair is checked once → O(n²)
 Brute force is inefficient for large arrays.
 Code: 
 
+
+
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums)):
@@ -35,5 +38,8 @@ class Solution:
                     return [i, j]
         # Return an empty list if no solution is found
         return []
+
+
+
 
 Leetcode Link of problem statement : https://leetcode.com/problems/two-sum?envType=problem-list-v2&envId=array
