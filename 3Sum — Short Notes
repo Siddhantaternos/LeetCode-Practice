@@ -1,0 +1,83 @@
+3Sum Short Notes
+
+Goal:
+Find all unique triplets whose sum is 0.
+
+Core Idea
+
+Sort the array
+
+Fix one number
+
+Use two pointers to find the other two
+
+Skip duplicates
+
+Why Sort?
+
+Enables two-pointer logic
+
+Makes duplicate removal easy
+
+Steps
+
+Sort nums
+
+Loop index i
+
+Skip duplicate nums[i]
+
+Set pointers
+
+l = i + 1, r = end
+
+While l < r:
+
+If sum < 0 → l += 1
+
+If sum > 0 → r -= 1
+
+If sum == 0:
+
+Store triplet
+
+Skip duplicates
+
+Move both pointers
+
+Code
+from typing import List
+
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        nums.sort()
+        res = []
+
+        for i in range(len(nums) - 2):
+            if i and nums[i] == nums[i - 1]:
+                continue
+
+            l, r = i + 1, len(nums) - 1
+            while l < r:
+                s = nums[i] + nums[l] + nums[r]
+                if s < 0: l += 1
+                elif s > 0: r -= 1
+                else:
+                    res.append([nums[i], nums[l], nums[r]])
+                    l += 1; r -= 1
+                    while l < r and nums[l] == nums[l - 1]: l += 1
+                    while l < r and nums[r] == nums[r + 1]: r -= 1
+        return res
+
+Complexity
+
+Time: O(n²)
+
+Space: O(1) (excluding output)
+
+Interview Signal
+
+If you understand why pointers move, this problem is DONE.
+If not, you’re just memorizing code.
+
+Next logical step: 4Sum → Same pattern, more control.
