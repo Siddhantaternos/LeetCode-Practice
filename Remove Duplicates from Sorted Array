@@ -1,0 +1,85 @@
+Remove Duplicates from Sorted Array — Short Notes
+Problem Essence
+
+Array is sorted
+
+Remove duplicates in-place
+
+Keep unique elements at the start
+
+Return count of unique elements k
+
+Ignore elements after index k-1
+
+Core Idea
+
+Use two pointers
+
+One pointer reads (i)
+
+One pointer writes (k)
+
+Overwrite duplicates instead of deleting
+
+Algorithm
+
+First element is always unique → set k = 1
+
+Loop from index 1 to end
+
+If nums[i] != nums[i-1]
+
+Write nums[i] at nums[k]
+
+Increment k
+
+Return k
+
+Code (LeetCode format)
+class Solution:
+    def removeDuplicates(self, nums):
+        if not nums:
+            return 0
+
+        k = 1
+        for i in range(1, len(nums)):
+            if nums[i] != nums[i - 1]:
+                nums[k] = nums[i]
+                k += 1
+        return k
+
+Example
+
+Input:
+
+[0,0,1,1,2,2,3]
+
+
+Output:
+
+k = 4
+nums = [0,1,2,3,_,_,_]
+
+Key Topics Used
+
+Lists & indexing
+
+For loop
+
+If condition
+
+Two pointers
+
+In-place array modification
+
+Sorted array property
+
+Time & Space
+
+Time: O(n)
+
+Space: O(1)
+
+Pattern Name
+
+👉 Two Pointer Technique (Slow–Fast pointer)
