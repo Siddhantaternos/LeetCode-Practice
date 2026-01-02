@@ -1,44 +1,35 @@
-LeetCode-Practice
-A structured collection of LeetCode solutions solved on a daily basis to strengthen core data structures and algorithms. The focus is on clean implementation, optimal complexity, and clear explanations, reflecting consistent preparation for technical interviews and real-world problem solving.
+🚀 LeetCode Practice
 
-1. What LeetCode really is (mentally get this right)
+A collection of LeetCode problems solved to strengthen **Data Structures & Algorithms** with a focus on **clean logic**, **optimal solutions**, and **interview-ready code**.
 
-LeetCode is not a normal coding environment.
 
-It is:
+# What This Repository Contains
 
-A judge system
+* Daily LeetCode problem solutions
+* Python implementations following LeetCode’s standard format
+* Optimized approaches with correct time and space complexity
 
-You write only the function
 
-LeetCode handles:
+# Important Note About LeetCode Format
 
-input
+LeetCode is a **judge-based platform**.
 
-output
+Only the function logic is written.
+Input, output, and test execution are handled internally.
 
-calling your code
+Standard format used:
 
-checking correctness
-
-If you try to think of it like VS Code, you’ll stay confused.
-
-2. The golden rule of LeetCode coding
-
-On LeetCode, you never write a full program.
-
-You only write:
-
+```python
 class Solution:
     def functionName(self, parameters):
-        # logic
         return answer
+```
 
+No `main()`, no `print()`, no input handling.
 
-That’s it.
+---
 
-No main().
-No print().
-No input reading.
+# Goal
 
-LeetCode secretly does the rest.
+Build strong DSA fundamentals and prepare for technical interviews through consistent practice.
+
