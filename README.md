@@ -9,6 +9,13 @@ A collection of LeetCode problems solved to strengthen **Data Structures & Algor
 * Python implementations following LeetCode’s standard format
 * Optimized approaches with correct time and space complexity
 
+Day 1  : [ ] Code  [ ] Commit  [ ] Notes
+Day 2  : [ ] Code  [ ] Commit  [ ] Notes
+Day 3  : [ ] Code  [ ] Commit  [ ] Notes
+Day 4  : [ ] Code  [ ] Commit  [ ] Notes
+Day 5  : [ ] Code  [ ] Commit  [ ] Notes
+Day 6  : [ ] Code  [ ] Commit  [ ] Notes
+Day 7  : [ ] Code  [ ] Commit  [ ] Notes
 
 # Important Note About LeetCode Format
 
