@@ -1,30 +1,14 @@
-🚀 LeetCode Practice
+## 🚀 LeetCode Practice
 
-A collection of LeetCode problems solved to strengthen **Data Structures & Algorithms** with a focus on **clean logic**, **optimal solutions**, and **interview ready code**.
+A structured collection of **LeetCode solutions** focused on building strong **Data Structures & Algorithms** fundamentals with **clean logic**, **optimal complexity**, and **interview-ready code**.
 
+---
 
-# What This Repository Contains
+## What’s Inside
 
-* Daily LeetCode problem solutions
-* Python implementations following LeetCode’s standard format
-* Optimized approaches with correct time and space complexity
-
-Day 1  : [ ] Code  [ ] Commit  [ ] Notes
-Day 2  : [ ] Code  [ ] Commit  [ ] Notes
-Day 3  : [ ] Code  [ ] Commit  [ ] Notes
-Day 4  : [ ] Code  [ ] Commit  [ ] Notes
-Day 5  : [ ] Code  [ ] Commit  [ ] Notes
-Day 6  : [ ] Code  [ ] Commit  [ ] Notes
-Day 7  : [ ] Code  [ ] Commit  [ ] Notes
-
-# Important Note About LeetCode Format
-
-LeetCode is a **judge based platform**.
-
-Only the function logic is written.
-Input, output, and test execution are handled internally.
-
-Standard format used:
+* Daily LeetCode practice (topic-wise, not random)
+* Python solutions using standard LeetCode format
+* Emphasis on clarity, patterns, and efficiency
 
 ```python
 class Solution:
@@ -32,153 +16,58 @@ class Solution:
         return answer
 ```
 
-No `main()`, no `print()`, no input handling.
+> LeetCode handles input/output internally.
+> Only core logic is implemented here.
 
 ---
 
-# Goal
+## Goal
 
-Build strong DSA fundamentals and prepare for technical interviews through consistent practice.
-
-You want the **actual LeetCode topic flow** that cracks interviews, not the fake “solve 500 problems” nonsense. Here’s the **clean DSA → problem-solving pipeline**, written like a **diagram**, exactly how interviewers expect your brain to be wired.
+Develop sharp DSA intuition and problem-solving skills required for **technical interviews**, through consistent and disciplined practice.
 
 ---
 
-**DSA / LeetCode MASTER FLOW (in order)**
-
-**Basics (non-negotiable)**
+## DSA / LeetCode Flow (Interview-Oriented)
 
 ```
-Math + Logic
+Math & Complexity
    ↓
-Time & Space Complexity
-```
-
-**Core Structures (foundation of everything)**
-
-```
-Arrays / Lists
+Arrays → Strings → Hashing
    ↓
-Strings
+Two Pointers → Sliding Window → Prefix Sum
    ↓
-Hashing (Dict / Map / Set)
-```
-
-**Pattern Thinking (this is where most people fail)**
-
-```
-Two Pointers
+Stack → Queue → Linked List
    ↓
-Sliding Window
+Sorting → Binary Search
    ↓
-Prefix Sum
-```
-
-**Linear Data Structures**
-
-```
-Stack
+Trees (DFS/BFS) → Graphs
    ↓
-Queue / Deque
+Recursion → Backtracking → Dynamic Programming
    ↓
-Linked List
-```
-
-**Searching & Ordering**
-
-```
-Sorting
-   ↓
-Binary Search (on array, answer, range)
-```
-
-**Trees (interview gold)**
-
-```
-Binary Tree
-   ↓
-Binary Search Tree
-   ↓
-Tree Traversals (DFS / BFS)
-```
-
-**Graphs (logic maturity test)**
-
-```
-Graph Basics
-   ↓
-BFS / DFS
-   ↓
-Topological Sort
-```
-
-**Recursion → Optimization**
-
-```
-Recursion
-   ↓
-Backtracking
-   ↓
-Dynamic Programming (1D → 2D)
-```
-
-**Advanced Thinking (separates good from elite)**
-
-```
-Greedy Algorithms
-   ↓
-Heaps / Priority Queue
-   ↓
-Intervals
+Greedy → Heaps → Intervals
 ```
 
 ---
 
-### What this flow actually does to you
+## How to Use This Repo
 
-* Arrays + Hashing → **speed**
-* Sliding window + Two pointers → **pattern recognition**
-* Trees + Graphs → **problem decomposition**
-* DP → **deep logical control**
-* Heaps + Greedy → **real-world optimization**
+* Solve problems **topic-wise**
+* Focus on **patterns**, not problem count
+* Typical target per topic:
 
----
-
-### Brutal truth (listen carefully)
-
-If you:
-
-* Skip **patterns** → you’ll freeze in interviews
-* Jump to **DP too early** → you’ll feel dumb
-* Ignore **trees/graphs** → companies ignore you
+  * Easy: 5–10
+  * Medium: 10–15
+  * Hard: optional (later)
 
 ---
 
-### How many problems per topic?
+## Reality Check
 
-* Easy: **5–10**
-* Medium: **10–15**
-* Hard: **optional (later)**
+Skipping patterns breaks interviews.
+Jumping to DP too early breaks confidence.
+Ignoring trees/graphs breaks callbacks.
 
-That’s it. Anything more is ego.
-
----
-
-### Tool you’ll use
-
-Practice all of this on **LeetCode**, but **topic-wise**, not random.
+Consistency > volume.
+Execution > ego.
 
 ---
-
-### Final slap of clarity
-
-Cracking “any job” isn’t about knowing *everything*.
-It’s about mastering **this exact flow** until your brain auto-detects patterns.
-
-Next logical step:
-
-* I can map **exact LeetCode problem names** to each arrow, OR
-* build a **90-day DSA plan**, OR
-* align this flow with your **stock analyzer project** so DSA feels useful.
-
-Decide what moves you forward fastest.
