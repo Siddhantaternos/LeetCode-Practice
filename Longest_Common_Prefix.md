@@ -1,87 +1,97 @@
 # 14. Longest Common Prefix
 
-## 📌 Goal
+## 🎯 Problem Statement
 
-Find the **longest starting substring** common to **all** strings in the array.
-If no common prefix exists, return `""`.
-
----
-
-## 💡 Core Idea (Why Sorting Works)
-
-* Sort the array of strings
-* After sorting:
-
-  * The **most different** strings are at the start and end
-* If the **first** and **last** strings share a prefix:
-
-  * All middle strings must share it too
-
-So we only compare **two strings**, not all.
+Given an array of strings, find the **longest prefix shared by all strings**.
+If no common prefix exists, return an empty string `""`.
 
 ---
 
-## 🔁 Algorithm
+## 🧠 Key Insight (Why Sorting Works)
 
-1. Sort the list of strings
+Sorting strings places the **most different strings at the extremes**.
+
+If the **first** and **last** strings (after sorting) share a prefix,
+then **every string in between must also share it**.
+
+➡️ Result:
+We only compare **two strings instead of all**.
+
+---
+
+## 🛠️ Approach Breakdown
+
+```
+Strings → Sort → Compare first & last → Build prefix → Stop on mismatch
+```
+
+### Step-by-step
+
+1. Sort the array of strings
 2. Take the first and last strings
-3. Compare characters one by one
-4. Stop at the first mismatch
-5. Return the prefix built so far
+3. Compare characters index by index
+4. Stop when characters differ
+5. Return the prefix collected so far
 
 ---
 
-## 🧠 Python Code (LeetCode Style)
+## 🧪 Example Walkthrough
+
+| Step     | Value                          |
+| -------- | ------------------------------ |
+| Input    | `["flower", "flow", "flight"]` |
+| Sorted   | `["flight", "flow", "flower"]` |
+| Compared | `"flight"` vs `"flower"`       |
+| Result   | `"fl"`                         |
+
+---
+
+## 🧩 Python Solution (LeetCode Compatible)
 
 ```python
 class Solution:
-    def longestCommonPrefix(self, v: List[str]) -> str:
-        ans = ""
-        v = sorted(v)
-        first = v[0]
-        last = v[-1]
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        if not strs:
+            return ""
+
+        strs.sort()
+        first, last = strs[0], strs[-1]
+        prefix = ""
 
         for i in range(min(len(first), len(last))):
             if first[i] != last[i]:
-                return ans
-            ans += first[i]
+                break
+            prefix += first[i]
 
-        return ans
+        return prefix
 ```
 
 ---
 
-## 🔍 Key Lines Explained
+## 🔎 Important Notes
 
-* `v = sorted(v)` → pushes most different strings to the ends
-* `first = v[0]`, `last = v[-1]` → only these two matter
-* `min(len(first), len(last))` → prevents index overflow
-* Mismatch → stop immediately (prefix breaks)
-
----
-
-## 📘 Example
-
-```
-Input: ["flower", "flow", "flight"]
-Sorted: ["flight", "flow", "flower"]
-Compare: "flight" & "flower"
-Output: "fl"
-```
+| Line                | Purpose                               |
+| ------------------- | ------------------------------------- |
+| `strs.sort()`       | Brings most different strings to ends |
+| `strs[0], strs[-1]` | Only these two determine the prefix   |
+| `min(len(...))`     | Prevents index overflow               |
+| `break` on mismatch | Prefix ends immediately               |
 
 ---
 
-## ⏱️ Complexity
+## ⏱️ Complexity Analysis
 
-* **Time:** `O(n log n)` (sorting)
-* **Space:** `O(1)` extra (excluding sort)
+| Metric | Value                            |
+| ------ | -------------------------------- |
+| Time   | `O(n log n)` (sorting dominates) |
+| Space  | `O(1)` extra space               |
 
 ---
 
-## 🧠 Pattern / Memory Hook
+## 🧠 Memory Trick
 
-```
-Sort → compare ends → build prefix → stop early
-```
+> **Sort → Compare Ends → Stop Early**
+
+If you understand *why* sorting reduces comparisons, you understand the problem.
 
 ---
