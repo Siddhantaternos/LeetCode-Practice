@@ -1,5 +1,3 @@
----
-
 # 🧩 Minimum Pair Removal to Sort Array II
 
 ## 📌 Problem Summary
