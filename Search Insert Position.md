@@ -1,4 +1,4 @@
-# 🔍 Search Insert Position — Clean Notes
+# 🔍 Search Insert Position 
 
 ## 📌 Problem
 
