@@ -1,4 +1,4 @@
-# 📦 4Sum — Notes
+# 📦 4 Sum 
 
 ## Problem Summary
 
